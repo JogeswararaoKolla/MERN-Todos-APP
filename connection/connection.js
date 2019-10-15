@@ -1,5 +1,7 @@
 // Database configuration
-const databaseUrl = "todoApp";
+require("dotenv").config();
+
+const databaseUrl = process.env.MONGODB_URI || process.env.MONGO_DB;
 const collections = ["todos"];
 const mongojs = require("mongojs");
 
